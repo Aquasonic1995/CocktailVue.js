@@ -1,12 +1,11 @@
 <template>
- Cocktail Random
-  <button @click="router.push('/')">To the Home</button>
-  <button  @click="router.push('cocktail/1')">To the Cocktail</button>
+  <app-layout imgUrl="/src/assets/img/bg-home.jpg" class="layout">
+  </app-layout>
 </template>
 
 <script setup>
 
-import router from "@/router";
+import AppLayout from "@/components/AppLayout.vue";
 </script>
 
 <style lang="scss" scoped>
