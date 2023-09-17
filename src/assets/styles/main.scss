@@ -22,28 +22,7 @@ a {
   color: inherit;
 }
 
-.title {
-  margin-left: auto;
-  margin-right: auto;
-  width: 450px;
-  text-align: center;
-  position: relative;
-  font-size: 32px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  margin-bottom: 80px;
 
-  &:after {
-    position: absolute;
-    bottom: -20px;
-    left: 38%;
-    content: '';
-    width: 100px;
-    height: 3px;
-    background: $accent;
-  }
-}
 
 .wrapper {
   margin-left: auto;
@@ -53,15 +32,13 @@ a {
   flex-direction: column;
   justify-content: center;
 }
+a{
+  text-decoration: none;
+}
+
 
 .el-input__wrapper  {
   background: $background !important;
 }
 .el-input__inner{
   color: $text !important;}
-.backLink{
-  position: absolute;
-  top: 33px;
-  left:  40%;
-  font-family: 'Raleway', sans-serif;
-}
