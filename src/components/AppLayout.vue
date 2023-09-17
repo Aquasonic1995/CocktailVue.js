@@ -38,15 +38,15 @@ const id = 2
 }
 
 .img {
-  width: 40%;
+  background-size: cover;
+  min-height: 100%; width: 35%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: cover;
-  z-index: 1;
+  object-fit: fill;
 }
 
 .main {
-  width: 60%;
+  width: 65%;
   padding: 32px 40px
 }
 .random-wrapper {
