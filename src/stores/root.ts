@@ -23,6 +23,7 @@ export const coctailsStore = defineStore('root', {
             const data = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
             )
             this.cocktail = data?.data?.drinks
+            console.log(this.cocktail)
 
         }
     }

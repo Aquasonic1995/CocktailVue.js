@@ -1,8 +1,7 @@
 <template>
   <app-layout imgUrl="/src/assets/img/bg-home.jpg">
     <div class="wrapper" v-if="cocktails.length===0">
-
-      <title>Choose your drink</title>
+      <Title>Choose your drink</Title>
       <el-select class="select"
                  v-model="ingredient"
                  placeholder="Choose main ingredient"
@@ -15,14 +14,14 @@
             :value="item.strIngredient1"
         />
       </el-select>
-      <div class="promo"><p>Try our delicious cocktail recipes for every occasion. Find delicious cocktail recipes by
+      <Promo><p>Try our delicious cocktail recipes for every occasion. Find delicious cocktail recipes by
         ingredient through our
-        <br> cocktail generator.</p></div>
+        <br> cocktail generator.</p></Promo>
       <img src="/Cocktails.png" alt="Cocktails">
     </div>
     <div class="wrapper" v-else>
       <back-button @click="backToSelect">Back</back-button>
-      <title>Cocktails with {{ ingredient }}</title>
+      <Title>Cocktails with {{ ingredient }}</Title>
       <div class="cocktails">
         <CocktailItem v-for="cocktail in cocktails"
                       :id="cocktail.idDrink"
@@ -33,7 +32,6 @@
 
       </div>
     </div>
-
   </app-layout>
 </template>
 
@@ -45,6 +43,7 @@ import {storeToRefs} from "pinia";
 import CocktailItem from "@/components/CocktailThumb.vue";
 import BackButton from "@/components/UI/BackButton.vue";
 import Title from "@/components/Title.vue"
+import Promo from "@/components/Promo.vue";
 
 const store = coctailsStore()
 onMounted(store.getIngredients)
@@ -70,13 +69,6 @@ const backToSelect = () => {
   margin-bottom: 60px;
 }
 
-.promo {
-  text-align: center;
-  color: $textMuted;
-  letter-spacing: 0.1em;
-  line-height: 36px;
-  margin-bottom: 60px;
-}
 
 img {
   margin-left: auto;

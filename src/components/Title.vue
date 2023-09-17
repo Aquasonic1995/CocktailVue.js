@@ -3,11 +3,14 @@
 </script>
 
 <template>
-<slot class="title"></slot>
+  <div class="title">
+    <slot></slot>
+  </div>
 </template>
 
 <style scoped lang="scss">
 @import "src/assets/styles/variables";
+
 .title {
   margin-left: auto;
   margin-right: auto;
