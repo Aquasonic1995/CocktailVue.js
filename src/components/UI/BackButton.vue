@@ -1,9 +1,10 @@
-<script setup lang="ts">
+<script setup >
 
+import router from "@/router";
 </script>
 
 <template>
-  <el-button class="backLink" type="primary"><slot></slot></el-button>
+  <el-button class="backLink" type="primary" @click="router.push({name:'home'})">Back</el-button>
 </template>
 
 <style scoped lang="scss">

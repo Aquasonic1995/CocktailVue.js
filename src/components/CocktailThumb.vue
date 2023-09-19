@@ -7,7 +7,7 @@
   </RouterLink>
 </template>
 <script setup>
-import {coctailsStore} from "@/stores/root";
+import {cocktailsStore} from "@/stores/root";
 
 const props = defineProps({
   id: {
@@ -23,7 +23,7 @@ const props = defineProps({
     required: true
   }
 })
-const store = coctailsStore()
+const store = cocktailsStore()
 </script>
 
 <style scoped lang="scss">

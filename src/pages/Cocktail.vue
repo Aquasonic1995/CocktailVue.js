@@ -1,6 +1,6 @@
 <template>
   <app-layout imgUrl="/Cocktail.png" class="layout">
-    <back-button @click="router.push({name:'home'})">Back</back-button>
+    <BackButton/>
     <div class="wrapper"><Title>{{ cocktail[0]?.strDrink }}</Title>
       <ul>
         <li v-if="cocktail[0]?.strIngredient1"><img src="/Heart.png" alt="heart">
@@ -44,12 +44,10 @@ import BackButton from "@/components/UI/BackButton.vue";
 import router from "@/router";
 import Title from "@/components/Title.vue";
 import {storeToRefs} from "pinia";
-import {coctailsStore} from "@/stores/root";
+import {cocktailsStore} from "@/stores/root";
 import Promo from "@/components/Promo.vue";
 
-const store = coctailsStore()
-
-
+const store = cocktailsStore()
 const {cocktail} = storeToRefs((store))
 
 </script>

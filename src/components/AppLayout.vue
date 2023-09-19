@@ -4,10 +4,7 @@
     <div class="img" :style="`background-image:url(${imgUrl})`"></div>
     <div class="main">
       <div class="random-wrapper">
-        <button @click="router.push({name:'random'})">To the Random</button>
-        <button @click="router.push({name:'cocktail', params: { id: id }})">To the Cocktail</button>
-        <button @click="router.push({name:'home'})">To the Home</button>
-        <el-button class="btn"  >Get a random cocktail</el-button>
+        <RandomButton  />
       </div>
       <slot class="layout"></slot>
     </div>
@@ -17,13 +14,14 @@
 
 <script setup>
 
-import router from "@/router";
+import RandomButton from "@/components/UI/RandomButton.vue";
 
 const props = defineProps({
   imgUrl: {
     type: String,
     required: true
-  }
+  },
+  cocktails:{}
 })
 const id = 2
 </script>
@@ -39,7 +37,8 @@ const id = 2
 
 .img {
   background-size: cover;
-  min-height: 100%; width: 35%;
+  min-height: 100%;
+  width: 35%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   object-fit: fill;
@@ -49,17 +48,9 @@ const id = 2
   width: 65%;
   padding: 32px 40px
 }
+
 .random-wrapper {
   text-align: end;
 }
-.btn{
-  color: $text;
-  background: $accent;
-  border:none;
-  font-family: 'Raleway', sans-serif;
-  &:active{
-    transform: translateY(1px);
-    filter: saturate(80%);
-  }
-}
+
 </style>

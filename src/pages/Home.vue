@@ -1,5 +1,5 @@
 <template>
-  <app-layout imgUrl="/src/assets/img/bg-home.jpg">
+  <app-layout imgUrl="/src/assets/img/bg-home.jpg" >
     <div class="wrapper" v-if="cocktails.length===0">
       <Title>Choose your drink</Title>
       <el-select class="select"
@@ -38,14 +38,14 @@
 <script setup>
 import {onMounted, ref} from "vue";
 import AppLayout from "@/components/AppLayout.vue";
-import {coctailsStore} from "@/stores/root";
+import {cocktailsStore} from "@/stores/root";
 import {storeToRefs} from "pinia";
 import CocktailItem from "@/components/CocktailThumb.vue";
 import BackButton from "@/components/UI/BackButton.vue";
 import Title from "@/components/Title.vue"
 import Promo from "@/components/Promo.vue";
 
-const store = coctailsStore()
+const store = cocktailsStore()
 onMounted(store.getIngredients)
 const {ingredients, cocktails} = storeToRefs((store))
 const ingredient = ref('')
@@ -77,7 +77,7 @@ img {
 }
 
 .cocktails {
-  max-height: 250px;
+  max-height: 300px;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   display: grid;

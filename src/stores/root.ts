@@ -2,11 +2,12 @@ import {defineStore} from 'pinia'
 
 import axios from "axios";
 
-export const coctailsStore = defineStore('root', {
+export const cocktailsStore = defineStore('root', {
     state: () => ({
         ingredients: [],
         cocktails: [],
-        cocktail: []
+        cocktail: [],
+        random:[]
     }),
     actions: {
         async getIngredients() {
@@ -23,7 +24,14 @@ export const coctailsStore = defineStore('root', {
             const data = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
             )
             this.cocktail = data?.data?.drinks
-            console.log(this.cocktail)
+
+
+        },
+        async getRandom() {
+            const data = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`
+            )
+            this.random= data?.data?.drinks
+            console.log(this.random)
 
         }
     }
