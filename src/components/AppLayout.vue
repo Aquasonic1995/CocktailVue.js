@@ -1,7 +1,7 @@
 <template>
 
   <div class="root">
-    <div class="img" :style="`background-image:url(${imgUrl})`">
+    <div class="img" :style="`background-image:url(${getImageUrl(props.name)})`" >
 
     </div>
     <div class="main">
@@ -19,12 +19,16 @@
 import RandomButton from "@/components/UI/RandomButton.vue";
 
 const props = defineProps({
-  imgUrl: {
-    type: String,
-    required: true
-  },
-  cocktails:{}
+
+  cocktails:{},
+  name:{
+    type: String
+  }
 })
+const getImageUrl = (name) => {
+  return new URL(`${name}`, import.meta.url).href
+}
+console.log(props.name)
 </script>
 
 <style lang="scss" scoped>

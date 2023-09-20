@@ -1,5 +1,5 @@
 <template>
-  <app-layout imgUrl="./cocktail.jpg" class="layout">
+  <app-layout name="/cocktail.jpg" class="layout">
     <BackButton/>
     <div class="wrapper"><Title>{{ cocktail[0]?.strDrink }}</Title>
       <ul>
