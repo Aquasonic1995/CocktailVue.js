@@ -1,5 +1,5 @@
 <template>
-  <app-layout imgUrl="bg-home.jpg">
+  <app-layout imgUrl="/src/assets/img/bg-home.jpg">
     <div class="wrapper" v-if="cocktails.length===0">
       <Title>Choose your drink</Title>
       <el-select class="select"
@@ -17,7 +17,7 @@
       <Promo><p>Try our delicious cocktail recipes for every occasion. Find delicious cocktail recipes by
         ingredient through our
         <br> cocktail generator.</p></Promo>
-      <img src="/Cocktails.png" alt="Cocktails">
+      <img src="/src/assets/img/Cocktails.png" alt="Cocktails">
     </div>
     <div class="wrapper" v-else>
       <back-button @click="backToSelect">Back</back-button>

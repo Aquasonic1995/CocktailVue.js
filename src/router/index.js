@@ -6,6 +6,7 @@ import Cocktail from "@/pages/Cocktail.vue";
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
+
         {
             path: '/cocktailApp',
             name: 'home',
@@ -16,6 +17,10 @@ const router = createRouter({
             name: 'cocktail',
             component: Cocktail
         },
+        {
+            path: '/',
+           redirect: '/cocktailApp'
+        }
     ]
 })
 

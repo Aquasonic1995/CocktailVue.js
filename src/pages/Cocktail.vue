@@ -1,33 +1,33 @@
 <template>
-  <app-layout imgUrl="Cocktail.png" class="layout">
+  <app-layout imgUrl="/src/assets/img/cocktail.jpg" class="layout">
     <BackButton/>
     <div class="wrapper"><Title>{{ cocktail[0]?.strDrink }}</Title>
       <ul>
-        <li v-if="cocktail[0]?.strIngredient1"><img src="/Heart.png" alt="heart">
+        <li v-if="cocktail[0]?.strIngredient1"><img src="/src/assets/img/Heart.png" alt="heart">
           {{ cocktail[0]?.strIngredient1 }} | {{ cocktail[0]?.strMeasure1 }}
         </li>
-        <li v-if="cocktail[0]?.strIngredient2"><img src="/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient2 }} |
+        <li v-if="cocktail[0]?.strIngredient2"><img src="/src/assets/img/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient2 }} |
           {{ cocktail[0]?.strMeasure2 }}
         </li>
-        <li v-if="cocktail[0]?.strIngredient3"><img src="/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient3 }} |
+        <li v-if="cocktail[0]?.strIngredient3"><img src="/src/assets/img/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient3 }} |
           {{ cocktail[0]?.strMeasure3 }}
         </li>
-        <li v-if="cocktail[0]?.strIngredient4"><img src="/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient4 }} |
+        <li v-if="cocktail[0]?.strIngredient4"><img src="/src/assets/img/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient4 }} |
           {{ cocktail[0]?.strMeasure4 }}
         </li>
-        <li v-if="cocktail[0]?.strIngredient5"><img src="/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient5 }} |
+        <li v-if="cocktail[0]?.strIngredient5"><img src="/src/assets/img/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient5 }} |
           {{ cocktail[0]?.strMeasure5 }}
         </li>
-        <li v-if="cocktail[0]?.strIngredient6"><img src="/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient6 }} |
+        <li v-if="cocktail[0]?.strIngredient6"><img src="/src/assets/img/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient6 }} |
           {{ cocktail[0]?.strMeasure6 }}
         </li>
-        <li v-if="cocktail[0]?.strIngredient7"><img src="/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient7 }} |
+        <li v-if="cocktail[0]?.strIngredient7"><img src="/src/assets/img/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient7 }} |
           {{ cocktail[0]?.strMeasure7 }}
         </li>
-        <li v-if="cocktail[0]?.strIngredient8"><img src="/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient8 }} |
+        <li v-if="cocktail[0]?.strIngredient8"><img src="/src/assets/img/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient8 }} |
           {{ cocktail[0]?.strMeasure8 }}
         </li>
-        <li v-if="cocktail[0]?.strIngredient9"><img src="/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient9 }} |
+        <li v-if="cocktail[0]?.strIngredient9"><img src="/src/assets/img/Heart.png" alt="heart"> {{ cocktail[0]?.strIngredient9 }} |
           {{ cocktail[0]?.strMeasure9 }}
         </li>
       </ul>
