@@ -23,7 +23,6 @@ const props = defineProps({
   },
   cocktails:{}
 })
-const id = 2
 </script>
 
 <style lang="scss" scoped>

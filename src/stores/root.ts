@@ -30,8 +30,7 @@ export const cocktailsStore = defineStore('root', {
         async getRandom() {
             const data = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`
             )
-            this.random= data?.data?.drinks
-            console.log(this.random)
+            this.cocktail= data?.data?.drinks
 
         }
     }

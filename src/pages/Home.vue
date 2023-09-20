@@ -1,5 +1,5 @@
 <template>
-  <app-layout imgUrl="/src/assets/img/bg-home.jpg" >
+  <app-layout imgUrl="/src/assets/img/bg-home.jpg">
     <div class="wrapper" v-if="cocktails.length===0">
       <Title>Choose your drink</Title>
       <el-select class="select"
@@ -23,10 +23,10 @@
       <back-button @click="backToSelect">Back</back-button>
       <Title>Cocktails with {{ ingredient }}</Title>
       <div class="cocktails">
-        <CocktailItem v-for="cocktail in cocktails"
-                      :id="cocktail.idDrink"
-                      :img="cocktail.strDrinkThumb"
-                      :name="cocktail.strDrink"
+        <CocktailThumb v-for="cocktail in cocktails"
+                       :id="cocktail.idDrink"
+                       :img="cocktail.strDrinkThumb"
+                       :name="cocktail.strDrink"
         />
 
 
@@ -40,7 +40,7 @@ import {onMounted, ref} from "vue";
 import AppLayout from "@/components/AppLayout.vue";
 import {cocktailsStore} from "@/stores/root";
 import {storeToRefs} from "pinia";
-import CocktailItem from "@/components/CocktailThumb.vue";
+import CocktailThumb from "@/components/CocktailThumb.vue";
 import BackButton from "@/components/UI/BackButton.vue";
 import Title from "@/components/Title.vue"
 import Promo from "@/components/Promo.vue";

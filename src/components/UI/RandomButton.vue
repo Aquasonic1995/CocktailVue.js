@@ -1,5 +1,8 @@
 <template>
-<el-button class="btn" @click="getRandomCocktail">Get a random cocktail</el-button>
+
+<el-button @click="getRandomCocktail" class="btn" >Get a random cocktail</el-button>
+
+
 </template>
 
 <script setup>
@@ -7,12 +10,13 @@ import router from "@/router";
 import {cocktailsStore} from "@/stores/root";
 import {storeToRefs} from "pinia";
  const store = cocktailsStore()
-const {cocktails}=storeToRefs(store)
-const getRandomCocktail = () =>{
-  router.push({name:'random'})
- cocktails.value=[]
- store.getRandom()
+const {cocktails, cocktail}=storeToRefs(store)
+const getRandomCocktail = async () =>{
+  cocktails.value=[]
+  await store.getRandom()
+  await  router.push({ name: 'cocktail', params: { id: cocktail?.value[0]?.idDrink}})
 }
+
 </script>
 
 <style lang="scss" scoped>
