@@ -1,7 +1,7 @@
 <template>
 
   <div class="root">
-    <div class="img" :style="`background-image:url(./src/assets/img/bg-home.jpg)`">
+    <div class="img" :style="`background-image:url(${imgUrl})`">
 
     </div>
     <div class="main">

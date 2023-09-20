@@ -1,5 +1,5 @@
 <template>
-  <app-layout imgUrl="">
+  <app-layout imgUrl="./bg-home.jpg">
     <div class="wrapper" v-if="cocktails.length===0">
       <Title>Choose your drink</Title>
       <el-select class="select"
