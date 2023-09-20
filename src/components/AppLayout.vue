@@ -1,7 +1,9 @@
 <template>
 
   <div class="root">
-    <div class="img" :style="`background-image:url(${imgUrl})`"></div>
+    <div class="img" :style="`background-image:url(./src/assets/img/bg-home.jpg)`">
+
+    </div>
     <div class="main">
       <div class="random-wrapper">
         <RandomButton  />
